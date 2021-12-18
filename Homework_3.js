@@ -1,40 +1,36 @@
-//1
+"use strict";
 
-function changeCollection() {
-  let res = [];
-  for (let i = 0; i < arguments.length; i += 1) {
-    arguments[i].shift();
-    res.push(arguments[i]);
-  }
-  return res;
-}
-console.log(
-  changeCollection([1, 2, 3, 4], ["apple", "banana", "qiwi"], ["hi", "bye"])
-);
+//1
 
 //2
 
-const users = [
-  { name: "Bob", age: 13, gender: "male" },
-  { name: "Anne", age: 25, gender: "female" },
-  { name: "Jake", age: 16, gender: "male" },
-];
-
-const items = ["a", "b", "c", "d"];
-
-const addNew = (arr) => {
-  return [...arr].map((el) => {
-    el["items"] = ["a", "b", "c", "d"];
-    return el;
-  });
+const props = {
+  user: {
+    login: "Admin",
+    password: "1234",
+  },
+  info: {
+    protocol: "https",
+    host: "123.45.6.7",
+    port: "1234",
+  },
 };
 
-console.log(addNew(users));
-console.log(users);
+let { login, password } = props.user;
+let { protocol, host, port } = props.info;
 
 //3
 
-function getRandomElement(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-console.log(getRandomElement([11, 22, 33, 44, 55]));
+const coordinates = [12, 134, 567, 456, 13, 14];
+
+console.log(12);
+
+//4
+
+const cars = [
+  { id: 1, model: "Mercedes-Benz", speed: 255 },
+  { id: 2, model: "BMW", speed: 260 },
+  { id: 3, model: "Skoda", speed: 180 },
+  { id: 4, model: "Nissan", speed: 200 },
+  { id: 5, model: "Mazda", speed: 240 },
+];
