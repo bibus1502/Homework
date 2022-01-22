@@ -13,4 +13,4 @@ function concatAll(arr, ...arrays) {
    }
    console.log(concatAll())
 
-   
+    
